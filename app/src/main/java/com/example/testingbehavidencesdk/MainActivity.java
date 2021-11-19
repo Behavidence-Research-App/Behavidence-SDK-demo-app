@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void success(@Nullable AnonymousAuth anonymousAuth) {
                     if (anonymousAuth != null)
-                        BehavidenceSDK.autoUploadInit(MainActivity.this, anonymousAuth);
+                        BehavidenceSDK.autoInitUpload(MainActivity.this, anonymousAuth);
                 }
 
                 @Override
