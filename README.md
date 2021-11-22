@@ -26,7 +26,7 @@ authClient = AuthClient.getInstance(this);
                 @Override
                 public void success(@Nullable AnonymousAuth anonymousAuth) {
                     if (anonymousAuth != null)
-                        BehavidenceSDK.autoUploadInit(MainActivity.this, anonymousAuth);
+                        BehavidenceSDK.autoInitUpload(MainActivity.this, anonymousAuth);
                 }
                 @Override
                 public void onFailure(@NonNull RuntimeException e) {
