@@ -1,4 +1,4 @@
-# TestingBehavidenceSDK
+# BehavidenceSDK-DemoAPP
  
 This is an example of how to implement a simple app using the Behavidence SDK.
 This app calculates the similarity scores, receives the research questions using Behavidence SDK.
