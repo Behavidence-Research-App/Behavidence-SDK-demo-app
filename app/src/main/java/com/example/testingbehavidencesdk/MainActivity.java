@@ -14,17 +14,10 @@ import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.view.View;
 
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
+
 import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 import com.example.testingbehavidencesdk.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,15 +27,14 @@ import java.util.List;
 import behavidence.android.sdk.Auth.AnonymousAuth;
 import behavidence.android.sdk.Auth.AuthClient;
 import behavidence.android.sdk.BehavidenceSDK;
-import behavidence.android.sdk.Networks.Responses.ApiResponse;
 import behavidence.android.sdk.SdkFunctions.Events.EventsClient;
-import behavidence.android.sdk.SdkFunctions.Journals.Journal;
 import behavidence.android.sdk.SdkFunctions.Journals.JournalClient;
-import behavidence.android.sdk.SdkFunctions.Researches.Models.ResearchQuestion;
-import behavidence.android.sdk.SdkFunctions.Researches.Models.ResearchQuestions;
 import behavidence.android.sdk.SdkFunctions.Researches.ResearchCodeClient;
-import behavidence.android.sdk.SdkFunctions.SimilarityScores.Models.SimilarityScore;
+import behavidence.android.sdk.SdkFunctions.Researches.ResearchQuestion;
+import behavidence.android.sdk.SdkFunctions.Researches.ResearchQuestions;
 import behavidence.android.sdk.SdkFunctions.SimilarityScores.ScoresClient;
+import behavidence.android.sdk.SdkFunctions.SimilarityScores.SimilarityScore;
+import behavidence.android.sdk.Utils.ApiResponse;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -121,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
-        AnonymousAuth anonymousAuth = (AnonymousAuth) (authClient.getAuthFromLocalStorage());
+        AnonymousAuth anonymousAuth = (AnonymousAuth) (authClient.getLocalAnonymousAuth());
         /*
 
          */
@@ -186,10 +178,10 @@ public class MainActivity extends AppCompatActivity {
                 String txt = "";
                 for(int i=0; i < similarityScores.size(); i++) {
                     txt += "day "+(i+1) +"\n";
-                    String Anxiety = "" + similarityScores.get(i).getAnxiety();
-                    String ADHD = "" + similarityScores.get(i).getAdhd();
-                    String Depression = "" + similarityScores.get(i).getDepression();
-                    String day = similarityScores.get(i).getDayKey();
+                    String Anxiety = "" + similarityScores.get(i).getAnxietyScore();
+                    String ADHD = "" + similarityScores.get(i).getAdhdScore();
+                    String Depression = "" + similarityScores.get(i).getDepressionScore();
+                    String day = similarityScores.get(i).getScoresDate();
                     txt += "Anxiety " + Anxiety + "%\n";
                     txt += "ADHD " + ADHD + "%\n";
                     txt += "Depression " + Depression + "%\n";

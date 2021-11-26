@@ -9,10 +9,9 @@ import android.util.Log;
 import android.widget.TextView;
 
 import java.util.List;
-
-import behavidence.android.sdk.Networks.Responses.ApiResponse;
-import behavidence.android.sdk.SdkFunctions.SimilarityScores.Models.SimilarityScore;
 import behavidence.android.sdk.SdkFunctions.SimilarityScores.ScoresClient;
+import behavidence.android.sdk.SdkFunctions.SimilarityScores.SimilarityScore;
+import behavidence.android.sdk.Utils.ApiResponse;
 
 public class GetSimilarity extends AppCompatActivity {
 
@@ -31,10 +30,10 @@ public class GetSimilarity extends AppCompatActivity {
                 String txt = "";
                 for(int i=0; i < similarityScores.size(); i++) {
                     txt += "day "+(i+1) +"\n";
-                    String Anxiety = "" + similarityScores.get(i).getAnxiety();
-                    String ADHD = "" + similarityScores.get(i).getAdhd();
-                    String Depression = "" + similarityScores.get(i).getDepression();
-                    String day = similarityScores.get(i).getDayKey();
+                    String Anxiety = "" + similarityScores.get(i).getAnxietyScore();
+                    String ADHD = "" + similarityScores.get(i).getAdhdScore();
+                    String Depression = "" + similarityScores.get(i).getDepressionScore();
+                    String day = similarityScores.get(i).getScoresDate();
                     txt += "Anxiety " + Anxiety + "%\n";
                     txt += "ADHD " + ADHD + "%\n";
                     txt += "Depression " + Depression + "%\n";

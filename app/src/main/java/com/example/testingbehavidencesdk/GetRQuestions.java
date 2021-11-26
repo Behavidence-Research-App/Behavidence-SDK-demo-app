@@ -10,10 +10,10 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import behavidence.android.sdk.Networks.Responses.ApiResponse;
-import behavidence.android.sdk.SdkFunctions.Researches.Models.ResearchQuestion;
-import behavidence.android.sdk.SdkFunctions.Researches.Models.ResearchQuestions;
 import behavidence.android.sdk.SdkFunctions.Researches.ResearchCodeClient;
+import behavidence.android.sdk.SdkFunctions.Researches.ResearchQuestion;
+import behavidence.android.sdk.SdkFunctions.Researches.ResearchQuestions;
+import behavidence.android.sdk.Utils.ApiResponse;
 
 public class GetRQuestions extends AppCompatActivity {
     String txt = "";
