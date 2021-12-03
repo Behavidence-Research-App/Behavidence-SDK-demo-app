@@ -22,7 +22,7 @@ authClient = AuthClient.getInstance(this);
 
 ## for the first signup anonymously by calling authClient.anonymousSignUp().execute then inside the success callback call autoUploadInit to upload the phone data automatically :
 
-            authClient.anonymousSignUp().executeAsync(new ApiResponse<AnonymousAuth>() {
+            authClient.anonymousSignUp().executeAsync(new ApiCallBack<AnonymousAuth>() {
                 @Override
                 public void success(@Nullable AnonymousAuth anonymousAuth) {
                     if (anonymousAuth != null)
@@ -42,7 +42,7 @@ authClient = AuthClient.getInstance(this);
  To get the similarity scores you need to declare instance of ScoresClient and then call getSimilarityScores function :
  
         ScoresClient scoresClient = ScoresClient.getInstance(this);
-        scoresClient.getSimilarityScores().executeAsync(new ApiResponse<List<SimilarityScore>>() {
+        scoresClient.getSimilarityScores().executeAsync(new ApiCallBack<List<SimilarityScore>>() {
             @Override
             public void success(@Nullable List<SimilarityScore> similarityScores) {
                 //there you can use the similarityScores object  
@@ -59,7 +59,7 @@ authClient = AuthClient.getInstance(this);
  to get the research questions you need to declare instance of ResearchCodeClient and then call getResearchQuestions function :
  
         ResearchCodeClient researchCodeClient = ResearchCodeClient.getInstance(this);
-        researchCodeClient.getResearchQuestions("ResearchCode").executeAsync(new ApiResponse<ResearchQuestions>() {
+        researchCodeClient.getResearchQuestions("ResearchCode").executeAsync(new ApiCallBack<ResearchQuestions>() {
             @Override
             public void success(@Nullable ResearchQuestions researchQuestions) {
                 List<ResearchQuestion> questions = researchQuestions.getResearchQuestions();
