@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: ./../../../Downloads/BehavidenceSdk-release.aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/feb67b9e09609550e5b1b5702933dd51/transformed/jetified-BehavidenceSdk-release/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/feb67b9e09609550e5b1b5702933dd51/transformed/jetified-BehavidenceSdk-release/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/feb67b9e09609550e5b1b5702933dd51/transformed/jetified-BehavidenceSdk-release/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/087f512429083f6944501cebff34db57/transformed/jetified-BehavidenceSdk-release/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/087f512429083f6944501cebff34db57/transformed/jetified-BehavidenceSdk-release/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/087f512429083f6944501cebff34db57/transformed/jetified-BehavidenceSdk-release/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

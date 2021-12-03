@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 import behavidence.android.sdk.SdkFunctions.SimilarityScores.ScoresClient;
 import behavidence.android.sdk.SdkFunctions.SimilarityScores.SimilarityScore;
-import behavidence.android.sdk.Utils.ApiResponse;
+import behavidence.android.sdk.Networks.Responses.ApiCallBack;
 
 public class GetSimilarity extends AppCompatActivity {
 
@@ -24,7 +24,7 @@ public class GetSimilarity extends AppCompatActivity {
         setContentView(R.layout.fragment_first);
         results = (TextView) findViewById(R.id.similarityResults);
         ScoresClient scoresClient = ScoresClient.getInstance(this);
-        scoresClient.getSimilarityScores().executeAsync(new ApiResponse<List<SimilarityScore>>() {
+        scoresClient.getSimilarityScores().executeAsync(new ApiCallBack<List<SimilarityScore>>() {
             @Override
             public void success(@Nullable List<SimilarityScore> similarityScores) {
                 String txt = "";

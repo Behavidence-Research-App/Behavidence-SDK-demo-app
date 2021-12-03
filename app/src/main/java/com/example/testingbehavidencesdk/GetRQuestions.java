@@ -10,10 +10,10 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import behavidence.android.sdk.Networks.Responses.ApiCallBack;
 import behavidence.android.sdk.SdkFunctions.Researches.ResearchCodeClient;
 import behavidence.android.sdk.SdkFunctions.Researches.ResearchQuestion;
 import behavidence.android.sdk.SdkFunctions.Researches.ResearchQuestions;
-import behavidence.android.sdk.Utils.ApiResponse;
 
 public class GetRQuestions extends AppCompatActivity {
     String txt = "";
@@ -24,7 +24,7 @@ public class GetRQuestions extends AppCompatActivity {
         setContentView(R.layout.fragment_second);
         results = (TextView) findViewById(R.id.textview_second);
         ResearchCodeClient researchCodeClient = ResearchCodeClient.getInstance(this);
-        researchCodeClient.getResearchQuestions("GAD212").executeAsync(new ApiResponse<ResearchQuestions>() {
+        researchCodeClient.getResearchQuestions("GAD212").executeAsync(new ApiCallBack<ResearchQuestions>() {
             @Override
             public void success(@Nullable ResearchQuestions researchQuestions) {
                 List<ResearchQuestion> questions = researchQuestions.getResearchQuestions();
