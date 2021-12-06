@@ -4,7 +4,7 @@ This is an example of how to integrate  the Behavidence SDK inside any app.
 This app receives the mental health similarity scores. (It also has the capacity to receive the research questions using Behavidence SDK? ask Girish)
 
 ### This is a link for the documentation of the Behavidence SDK :
-https://docs.google.com/document/d/18sgC18lHhfTTBh13MtIzLEd_UW_CVg-4v12DJX43xTU/edit
+https://docs.google.com/document/d/1IT2HcYvF6aE7lHyPO9aX-SSeWhUSKWeTF4hd9Pgm93M/edit?usp=sharing
 
 # steps:
 
